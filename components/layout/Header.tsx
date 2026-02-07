@@ -29,22 +29,15 @@ export default function Header() {
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
           {/* Logo */}
           <Link href="/" style={{display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none'}}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#FFF',
-              fontWeight: 900,
-              fontSize: '24px',
-              border: '3px solid #FFF',
-              boxShadow: '0 2px 8px rgba(30, 91, 168, 0.3)',
-            }}>
-              ŠK
-            </div>
+            <img
+              src="https://srbijasport.net/img/club/18/140"
+              alt="FK Šumadija 1903 Logo"
+              style={{
+                width: '60px',
+                height: '60px',
+                objectFit: 'contain',
+              }}
+            />
             <div>
               <div style={{fontFamily: 'Roboto Condensed', fontSize: '22px', fontWeight: 900, color: '#1E5BA8', lineHeight: 1, letterSpacing: '-0.5px'}}>
                 FK ŠUMADIJA

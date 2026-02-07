@@ -7,25 +7,24 @@ export default function Home() {
       <section style={{
         position: 'relative',
         height: '600px',
-        background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
+        background: `linear-gradient(rgba(30, 91, 168, 0.85), rgba(10, 38, 71, 0.85)), url('https://www.glassumadije.rs/wp-content/uploads/2019/09/fk-sumadija.jpg') center/cover`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
       }}>
-        {/* Pattern overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-          opacity: 0.3,
-        }}></div>
 
         <div className="container-custom" style={{position: 'relative', zIndex: 10, textAlign: 'center'}}>
-          <div style={{
-            fontSize: '60px',
-            marginBottom: '20px',
-          }}>🐺</div>
+          <img
+            src="https://srbijasport.net/img/club/18/140"
+            alt="FK Šumadija 1903"
+            style={{
+              width: '120px',
+              height: '120px',
+              marginBottom: '30px',
+              filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5))',
+            }}
+          />
 
           <h1 style={{
             fontFamily: 'Roboto Condensed',
@@ -264,24 +263,42 @@ export default function Home() {
             </div>
 
             <div style={{
-              background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
+              position: 'relative',
               borderRadius: '8px',
-              padding: '60px 40px',
-              textAlign: 'center',
-              color: '#FFF',
+              overflow: 'hidden',
+              height: '400px',
             }}>
-              <div style={{fontSize: '80px', marginBottom: '20px'}}>🏆</div>
+              <img
+                src="https://sportissimo.republika.rs/data/images/2025-08-15/860695_htdreh_fxl.webp?timestamp=1755208800"
+                alt="FK Šumadija Tim"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
               <div style={{
-                fontFamily: 'Roboto Condensed',
-                fontSize: '72px',
-                fontWeight: 900,
-                lineHeight: 1,
-                marginBottom: '10px',
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background: 'linear-gradient(to top, rgba(30, 91, 168, 0.95), transparent)',
+                padding: '40px',
+                color: '#FFF',
+                textAlign: 'center',
               }}>
-                120+
-              </div>
-              <div style={{fontSize: '18px', fontWeight: 600, letterSpacing: '1px'}}>
-                GODINA TRADICIJE
+                <div style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontSize: '72px',
+                  fontWeight: 900,
+                  lineHeight: 1,
+                  marginBottom: '10px',
+                }}>
+                  120+
+                </div>
+                <div style={{fontSize: '18px', fontWeight: 600, letterSpacing: '1px'}}>
+                  GODINA TRADICIJE
+                </div>
               </div>
             </div>
           </div>

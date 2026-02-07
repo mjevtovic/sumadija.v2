@@ -9,6 +9,17 @@ export default function Footer() {
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '40px'}}>
           {/* Club Info */}
           <div>
+            <div style={{marginBottom: '20px'}}>
+              <img
+                src="https://srbijasport.net/img/club/18/140"
+                alt="FK Šumadija 1903"
+                style={{
+                  width: '80px',
+                  height: '80px',
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
             <h3 style={{fontFamily: 'Roboto Condensed', fontSize: '18px', fontWeight: 700, marginBottom: '15px', textTransform: 'uppercase'}}>
               O KLUBU
             </h3>
