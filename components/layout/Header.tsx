@@ -9,16 +9,16 @@ export default function Header() {
   return (
     <header style={{background: '#FFFFFF', borderBottom: '1px solid #E0E0E0', position: 'sticky', top: 0, zIndex: 1000}}>
       {/* Top Bar */}
-      <div style={{background: '#003DA5', padding: '8px 0'}}>
+      <div style={{background: '#1E5BA8', padding: '10px 0'}}>
         <div className="container-custom">
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '13px', color: '#FFF'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
-              <span style={{fontWeight: 600}}>OSNOVAN 1903</span>
+              <span style={{fontWeight: 700, letterSpacing: '1px'}}>🐺 PLAVI VUKOVI • OSNOVAN 1903</span>
             </div>
             <div style={{display: 'flex', gap: '15px'}}>
-              <a href="#" style={{color: '#FFF', textDecoration: 'none'}}>Facebook</a>
-              <a href="#" style={{color: '#FFF', textDecoration: 'none'}}>Instagram</a>
-              <a href="#" style={{color: '#FFF', textDecoration: 'none'}}>YouTube</a>
+              <a href="https://www.facebook.com/fk-sumadija-1903" target="_blank" rel="noopener noreferrer" style={{color: '#FFF', textDecoration: 'none', transition: 'opacity 0.2s'}} onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'} onMouseOut={(e) => e.currentTarget.style.opacity = '1'}>Facebook</a>
+              <a href="https://www.instagram.com/sumadija_1903/" target="_blank" rel="noopener noreferrer" style={{color: '#FFF', textDecoration: 'none', transition: 'opacity 0.2s'}} onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'} onMouseOut={(e) => e.currentTarget.style.opacity = '1'}>Instagram</a>
+              <a href="#" style={{color: '#FFF', textDecoration: 'none', transition: 'opacity 0.2s'}} onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'} onMouseOut={(e) => e.currentTarget.style.opacity = '1'}>YouTube</a>
             </div>
           </div>
         </div>
@@ -30,39 +30,41 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" style={{display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none'}}>
             <div style={{
-              width: '50px',
-              height: '50px',
-              background: '#003DA5',
+              width: '60px',
+              height: '60px',
+              background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#FFF',
               fontWeight: 900,
-              fontSize: '18px',
+              fontSize: '24px',
+              border: '3px solid #FFF',
+              boxShadow: '0 2px 8px rgba(30, 91, 168, 0.3)',
             }}>
-              FK
+              ŠK
             </div>
             <div>
-              <div style={{fontFamily: 'Roboto Condensed', fontSize: '20px', fontWeight: 900, color: '#003DA5', lineHeight: 1}}>
-                FK ŠUMADIJA 1903
+              <div style={{fontFamily: 'Roboto Condensed', fontSize: '22px', fontWeight: 900, color: '#1E5BA8', lineHeight: 1, letterSpacing: '-0.5px'}}>
+                FK ŠUMADIJA
               </div>
-              <div style={{fontSize: '11px', color: '#666', textTransform: 'uppercase', letterSpacing: '0.5px'}}>
-                Kragujevac
+              <div style={{fontSize: '12px', color: '#666', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600}}>
+                Kragujevac • 1903
               </div>
             </div>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex" style={{gap: '30px'}}>
-            <Link href="/" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Početna</Link>
-            <Link href="/vesti" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Vesti</Link>
-            <Link href="/utakmice" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Utakmice</Link>
-            <Link href="/timovi" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Timovi</Link>
-            <Link href="/omladinska-skola" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Škola</Link>
-            <Link href="/shop" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Shop</Link>
-            <Link href="/istorija" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Istorija</Link>
-            <Link href="/kontakt" style={{color: '#333', textDecoration: 'none', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase'}}>Kontakt</Link>
+            <Link href="/" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Početna</Link>
+            <Link href="/vesti" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Vesti</Link>
+            <Link href="/utakmice" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Utakmice</Link>
+            <Link href="/timovi" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Timovi</Link>
+            <Link href="/omladinska-skola" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Škola</Link>
+            <Link href="/shop" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Shop</Link>
+            <Link href="/istorija" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Istorija</Link>
+            <Link href="/kontakt" style={{color: '#1A1A1A', textDecoration: 'none', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', transition: 'color 0.2s'}} className="nav-link">Kontakt</Link>
           </div>
 
           {/* Mobile Toggle */}

@@ -3,599 +3,377 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div>
-      {/* HERO SECTION - Like Sheffield FC */}
+      {/* HERO SECTION */}
       <section style={{
         position: 'relative',
         height: '600px',
-        background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect fill=\'%23D2B48C\' width=\'100\' height=\'100\'/%3E%3C/svg%3E") center/cover',
+        background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        overflow: 'hidden',
       }}>
-        {/* Sepia overlay to simulate vintage photo */}
+        {/* Pattern overlay */}
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4))',
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          opacity: 0.3,
         }}></div>
 
         <div className="container-custom" style={{position: 'relative', zIndex: 10, textAlign: 'center'}}>
+          <div style={{
+            fontSize: '60px',
+            marginBottom: '20px',
+          }}>🐺</div>
+
           <h1 style={{
             fontFamily: 'Roboto Condensed',
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+            fontSize: 'clamp(2.5rem, 6vw, 5rem)',
             fontWeight: 900,
             color: '#FFF',
-            marginBottom: '30px',
+            marginBottom: '20px',
             textTransform: 'uppercase',
-            letterSpacing: '2px',
-            lineHeight: 1.2,
+            letterSpacing: '3px',
+            lineHeight: 1.1,
           }}>
-            NAJSTARIJI FUDBALSKI<br />KLUB U SRBIJI
+            FK ŠUMADIJA 1903
           </h1>
 
-          <Link href="/istorija">
-            <button className="btn-gold" style={{fontSize: '16px', padding: '16px 40px'}}>
-              ISTORIJA
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      {/* QUICK LINKS GRID - Sheffield FC Style */}
-      <section style={{background: '#FFF', padding: '0'}}>
-        <div className="container-custom" style={{transform: 'translateY(-50px)'}}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
+          <p style={{
+            fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+            color: '#FFF',
+            marginBottom: '10px',
+            fontWeight: 600,
+            letterSpacing: '2px',
           }}>
-            {/* World's First Style Card */}
-            <Link href="/istorija" style={{textDecoration: 'none'}}>
-              <div className="card" style={{height: '200px', position: 'relative', overflow: 'hidden'}}>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect fill=\'%23D2B48C\' width=\'100\' height=\'100\'/%3E%3C/svg%3E") center/cover',
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'rgba(0, 0, 0, 0.5)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <div style={{textAlign: 'center', color: '#FFF'}}>
-                    <div style={{fontSize: '40px', marginBottom: '10px'}}>📜</div>
-                    <h3 style={{
-                      fontFamily: 'Roboto Condensed',
-                      fontSize: '18px',
-                      fontWeight: 900,
-                      textTransform: 'uppercase',
-                      color: '#D4A017',
-                    }}>
-                      OSNOVAN 1903
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            PLAVI VUKOVI • KRAGUJEVAC
+          </p>
 
-            {/* Shop Card */}
-            <Link href="/shop" style={{textDecoration: 'none'}}>
-              <div className="card" style={{height: '200px', position: 'relative', overflow: 'hidden'}}>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: '#003DA5',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <div style={{textAlign: 'center', color: '#FFF'}}>
-                    <div style={{fontSize: '40px', marginBottom: '10px'}}>👕</div>
-                    <h3 style={{
-                      fontFamily: 'Roboto Condensed',
-                      fontSize: '18px',
-                      fontWeight: 900,
-                      textTransform: 'uppercase',
-                    }}>
-                      SHOP
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Club Info Card */}
-            <Link href="/timovi" style={{textDecoration: 'none'}}>
-              <div className="card" style={{height: '200px', position: 'relative', overflow: 'hidden'}}>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect fill=\'%230052D9\' width=\'100\' height=\'100\'/%3E%3C/svg%3E") center/cover',
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'rgba(0, 61, 165, 0.8)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <div style={{textAlign: 'center', color: '#FFF'}}>
-                    <div style={{fontSize: '40px', marginBottom: '10px'}}>⚽</div>
-                    <h3 style={{
-                      fontFamily: 'Roboto Condensed',
-                      fontSize: '18px',
-                      fontWeight: 900,
-                      textTransform: 'uppercase',
-                    }}>
-                      TIMOVI
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Stadium Card */}
-            <Link href="/stadion" style={{textDecoration: 'none'}}>
-              <div className="card" style={{height: '200px', position: 'relative', overflow: 'hidden'}}>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect fill=\'%23A67C52\' width=\'100\' height=\'100\'/%3E%3C/svg%3E") center/cover',
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'rgba(139, 90, 43, 0.7)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <div style={{textAlign: 'center', color: '#FFF'}}>
-                    <div style={{fontSize: '40px', marginBottom: '10px'}}>🏟️</div>
-                    <h3 style={{
-                      fontFamily: 'Roboto Condensed',
-                      fontSize: '18px',
-                      fontWeight: 900,
-                      textTransform: 'uppercase',
-                    }}>
-                      STADION BUBANJ
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* HERITAGE SECTION - Sheffield FC "World's First" Style */}
-      <section className="section-white" style={{marginTop: '40px'}}>
-        <div className="container-custom">
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'center'}}>
-            {/* Vintage Photo */}
-            <div>
-              <div style={{
-                width: '100%',
-                aspectRatio: '4/3',
-                background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect fill=\'%23D2B48C\' width=\'100\' height=\'100\'/%3E%3C/svg%3E") center/cover',
-                border: '8px solid #FFF',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              }}>
-                <div style={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#8B5A2B',
-                  fontSize: '60px',
-                }}>
-                  📷
-                </div>
-              </div>
-            </div>
-
-            {/* Heritage Text */}
-            <div>
-              <h2 style={{
-                fontFamily: 'Roboto Condensed',
-                fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-                fontWeight: 900,
-                color: '#333',
-                marginBottom: '10px',
-                textTransform: 'uppercase',
-              }}>
-                NAJSTARIJI <span style={{color: '#D4A017'}}>FUDBALSKI KLUB</span>
-              </h2>
-              <h3 style={{
-                fontFamily: 'Roboto Condensed',
-                fontSize: 'clamp(1.5rem, 3vw, 2rem)',
-                fontWeight: 900,
-                color: '#003DA5',
-                marginBottom: '25px',
-              }}>
-                U SRBIJI
-              </h3>
-
-              <div style={{
-                padding: '20px',
-                background: '#F5F5F5',
-                borderLeft: '4px solid #D4A017',
-                marginBottom: '25px',
-              }}>
-                <p style={{fontSize: '14px', fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px'}}>
-                  1903 - Osnivanje kluba
-                </p>
-                <p style={{fontSize: '15px', lineHeight: 1.7, color: '#666'}}>
-                  FK Šumadija osnovan je 1903. godine u srcu Šumadije, u Kragujevcu. Sa više od 120 godina bogatog nasleđa, predstavljamo ponos srpskog fudbala i kontinuitet koji retki klubovi mogu da pohvale.
-                </p>
-              </div>
-
-              <p style={{fontSize: '15px', lineHeight: 1.8, color: '#666', marginBottom: '30px'}}>
-                Od osnivanja do danas, klub je bio sinonim za razvoj mladih talenata i posvećenost zajednici. Naša istorija je istorija strasti, lojalnosti i neprekidnog doprinosa srpskom fudbalu.
-              </p>
-
-              <div style={{display: 'flex', gap: '15px', flexWrap: 'wrap'}}>
-                <Link href="/istorija">
-                  <button className="btn-gold">NAŠA ISTORIJA</button>
-                </Link>
-                <Link href="/timovi">
-                  <button className="btn-red">PRVI TIM</button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SHOP/PRODUCTS SECTION - Sheffield FC Style */}
-      <section className="section-gray">
-        <div className="container-custom">
-          <h2 style={{
-            fontFamily: 'Roboto Condensed',
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-            fontWeight: 900,
-            textAlign: 'center',
-            marginBottom: '50px',
-            textTransform: 'uppercase',
-            color: '#003DA5',
+          <p style={{
+            fontSize: '18px',
+            color: 'rgba(255, 255, 255, 0.9)',
+            marginBottom: '40px',
+            maxWidth: '600px',
+            margin: '0 auto 40px',
           }}>
-            KLUPSKA PRODAVNICA
-          </h2>
+            Najstariji fudbalski klub u Srbiji od 1903. godine
+          </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '30px',
-          }}>
-            {/* Product Card 1 */}
-            <div className="card">
-              <div style={{
-                width: '100%',
-                aspectRatio: '1',
-                background: '#FFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '60px',
-                borderBottom: '1px solid #E0E0E0',
-              }}>
-                👕
-              </div>
-              <div style={{padding: '20px'}}>
-                <h3 style={{
-                  fontFamily: 'Roboto Condensed',
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  marginBottom: '10px',
-                  color: '#003DA5',
-                  textTransform: 'uppercase',
-                }}>
-                  DRES DOMAĆI 2024
-                </h3>
-                <p style={{fontSize: '24px', fontWeight: 700, color: '#D4A017', marginBottom: '15px'}}>
-                  4.500 RSD
-                </p>
-                <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '20px'}}>
-                  Originalni dres FK Šumadija 1903 za sezonu 2024. Vrhunski kvalitet materijala.
-                </p>
-                <Link href="/shop">
-                  <button className="btn-gold" style={{width: '100%'}}>KUPI SADA</button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Product Card 2 */}
-            <div className="card">
-              <div style={{
-                width: '100%',
-                aspectRatio: '1',
-                background: '#003DA5',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '60px',
-                borderBottom: '1px solid #E0E0E0',
-              }}>
-                🧢
-              </div>
-              <div style={{padding: '20px'}}>
-                <h3 style={{
-                  fontFamily: 'Roboto Condensed',
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  marginBottom: '10px',
-                  color: '#003DA5',
-                  textTransform: 'uppercase',
-                }}>
-                  KLUPSKA KAPA
-                </h3>
-                <p style={{fontSize: '24px', fontWeight: 700, color: '#D4A017', marginBottom: '15px'}}>
-                  1.500 RSD
-                </p>
-                <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '20px'}}>
-                  Pamučna kapa sa vezenim grbom kluba. Savršena za svakodnevno nošenje.
-                </p>
-                <Link href="/shop">
-                  <button className="btn-gold" style={{width: '100%'}}>KUPI SADA</button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Product Card 3 */}
-            <div className="card">
-              <div style={{
-                width: '100%',
-                aspectRatio: '1',
-                background: '#FFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '60px',
-                borderBottom: '1px solid #E0E0E0',
-              }}>
-                🧣
-              </div>
-              <div style={{padding: '20px'}}>
-                <h3 style={{
-                  fontFamily: 'Roboto Condensed',
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  marginBottom: '10px',
-                  color: '#003DA5',
-                  textTransform: 'uppercase',
-                }}>
-                  NAVIJAČKI ŠAL
-                </h3>
-                <p style={{fontSize: '24px', fontWeight: 700, color: '#D4A017', marginBottom: '15px'}}>
-                  2.000 RSD
-                </p>
-                <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '20px'}}>
-                  Tradicionalni navijački šal sa klupskim bojama i grbom.
-                </p>
-                <Link href="/shop">
-                  <button className="btn-gold" style={{width: '100%'}}>KUPI SADA</button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Product Card 4 */}
-            <div className="card">
-              <div style={{
-                width: '100%',
-                aspectRatio: '1',
-                background: '#2C2C2C',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '60px',
-                borderBottom: '1px solid #E0E0E0',
-              }}>
-                🎒
-              </div>
-              <div style={{padding: '20px'}}>
-                <h3 style={{
-                  fontFamily: 'Roboto Condensed',
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  marginBottom: '10px',
-                  color: '#003DA5',
-                  textTransform: 'uppercase',
-                }}>
-                  SPORTSKA TORBA
-                </h3>
-                <p style={{fontSize: '24px', fontWeight: 700, color: '#D4A017', marginBottom: '15px'}}>
-                  3.500 RSD
-                </p>
-                <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '20px'}}>
-                  Velika sportska torba sa više pregrada. Idealna za trening.
-                </p>
-                <Link href="/shop">
-                  <button className="btn-gold" style={{width: '100%'}}>KUPI SADA</button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div style={{textAlign: 'center', marginTop: '50px'}}>
-            <Link href="/shop">
-              <button className="btn-red" style={{fontSize: '16px', padding: '16px 50px'}}>
-                POGLEDAJ SVE PROIZVODE
+          <div style={{display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap'}}>
+            <Link href="/utakmice">
+              <button className="btn-white">
+                UTAKMICE
+              </button>
+            </Link>
+            <Link href="/istorija">
+              <button className="btn-outline" style={{borderColor: '#FFF', color: '#FFF'}}>
+                NAŠA ISTORIJA
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* NEWS SECTION */}
-      <section className="section-white">
+      {/* QUICK ACCESS CARDS */}
+      <section style={{background: '#F8F9FA', padding: '80px 0'}}>
         <div className="container-custom">
-          <h2 style={{
-            fontFamily: 'Roboto Condensed',
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-            fontWeight: 900,
-            textAlign: 'center',
-            marginBottom: '50px',
-            textTransform: 'uppercase',
-            color: '#003DA5',
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '30px',
           }}>
-            NAJNOVIJE VESTI
-          </h2>
+            {/* Stadion Card */}
+            <Link href="/stadion" style={{textDecoration: 'none'}}>
+              <div className="card" style={{
+                height: '280px',
+                background: '#FFF',
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '8px',
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '30px',
+                  textAlign: 'center',
+                }}>
+                  <div style={{fontSize: '60px', marginBottom: '20px'}}>🏟️</div>
+                  <h3 style={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: '24px',
+                    fontWeight: 900,
+                    color: '#FFF',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>
+                    Stadion Bubanj
+                  </h3>
+                  <p style={{fontSize: '14px', color: 'rgba(255, 255, 255, 0.9)'}}>
+                    Kapacitet: 1,000 gledalaca
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Timovi Card */}
+            <Link href="/timovi" style={{textDecoration: 'none'}}>
+              <div className="card" style={{
+                height: '280px',
+                background: '#FFF',
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '8px',
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: '#FFF',
+                  border: '3px solid #1E5BA8',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '30px',
+                  textAlign: 'center',
+                }}>
+                  <div style={{fontSize: '60px', marginBottom: '20px'}}>⚽</div>
+                  <h3 style={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: '24px',
+                    fontWeight: 900,
+                    color: '#1E5BA8',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>
+                    Naši Timovi
+                  </h3>
+                  <p style={{fontSize: '14px', color: '#666'}}>
+                    Prvi tim i omladinske selekcije
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Shop Card */}
+            <Link href="/shop" style={{textDecoration: 'none'}}>
+              <div className="card" style={{
+                height: '280px',
+                background: '#FFF',
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '8px',
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(135deg, #0A2647 0%, #1E5BA8 100%)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '30px',
+                  textAlign: 'center',
+                }}>
+                  <div style={{fontSize: '60px', marginBottom: '20px'}}>👕</div>
+                  <h3 style={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: '24px',
+                    fontWeight: 900,
+                    color: '#FFF',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>
+                    Fan Shop
+                  </h3>
+                  <p style={{fontSize: '14px', color: 'rgba(255, 255, 255, 0.9)'}}>
+                    Dres, šalovi i memorabilija
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HERITAGE SECTION */}
+      <section style={{background: '#FFF', padding: '80px 0'}}>
+        <div className="container-custom">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '60px',
+            alignItems: 'center',
+          }}>
+            <div>
+              <span style={{
+                display: 'inline-block',
+                background: '#1E5BA8',
+                color: '#FFF',
+                padding: '8px 16px',
+                fontSize: '12px',
+                fontWeight: 700,
+                letterSpacing: '1px',
+                marginBottom: '20px',
+              }}>
+                OD 1903. GODINE
+              </span>
+
+              <h2 style={{
+                fontFamily: 'Roboto Condensed',
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: 900,
+                color: '#1A1A1A',
+                marginBottom: '20px',
+                lineHeight: 1.2,
+              }}>
+                Najstariji fudbalski klub u Srbiji
+              </h2>
+
+              <p style={{
+                fontSize: '16px',
+                lineHeight: 1.8,
+                color: '#666',
+                marginBottom: '20px',
+              }}>
+                FK Šumadija osnovan je 14. septembra 1903. godine u Kragujevcu,
+                što ga čini najstarijim fudbalskim klubom u Srbiji. Osnivač kluba
+                je bio Danilo Stojanović, poznat kao "Čika Dača".
+              </p>
+
+              <p style={{
+                fontSize: '16px',
+                lineHeight: 1.8,
+                color: '#666',
+                marginBottom: '30px',
+              }}>
+                Naše navijače zovemo <strong style={{color: '#1E5BA8'}}>Plavi Vukovi</strong> -
+                simbol snage, hrabrosti i lojalnosti koji nas prati više od 120 godina.
+              </p>
+
+              <Link href="/istorija">
+                <button className="btn-blue">
+                  PROČITAJ VIŠE
+                </button>
+              </Link>
+            </div>
+
+            <div style={{
+              background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
+              borderRadius: '8px',
+              padding: '60px 40px',
+              textAlign: 'center',
+              color: '#FFF',
+            }}>
+              <div style={{fontSize: '80px', marginBottom: '20px'}}>🏆</div>
+              <div style={{
+                fontFamily: 'Roboto Condensed',
+                fontSize: '72px',
+                fontWeight: 900,
+                lineHeight: 1,
+                marginBottom: '10px',
+              }}>
+                120+
+              </div>
+              <div style={{fontSize: '18px', fontWeight: 600, letterSpacing: '1px'}}>
+                GODINA TRADICIJE
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEWS SECTION */}
+      <section style={{background: '#F8F9FA', padding: '80px 0'}}>
+        <div className="container-custom">
+          <div style={{marginBottom: '50px', textAlign: 'center'}}>
+            <h2 style={{
+              fontFamily: 'Roboto Condensed',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 900,
+              color: '#1A1A1A',
+              marginBottom: '10px',
+            }}>
+              Najnovije Vesti
+            </h2>
+            <p style={{fontSize: '16px', color: '#666'}}>
+              Pratite najnovije vesti i dešavanja iz našeg kluba
+            </p>
+          </div>
 
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '30px',
           }}>
-            {/* News Card 1 */}
-            <Link href="/vesti/1" style={{textDecoration: 'none'}}>
-              <div className="card">
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '16/9',
-                  background: '#C8102E',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '50px',
-                  color: '#FFF',
+            {[
+              { title: 'Rezultati poslednje utakmice', category: 'UTAKMICA', color: '#1E5BA8' },
+              { title: 'Najave narednog kola', category: 'NAJAVE', color: '#3A7BC8' },
+              { title: 'Priprema za prolećni deo sezone', category: 'TIM', color: '#DC3545' },
+            ].map((news, i) => (
+              <Link key={i} href="/vesti" style={{textDecoration: 'none'}}>
+                <div className="card" style={{
+                  background: '#FFF',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
                 }}>
-                  ⚽
-                </div>
-                <div style={{padding: '25px'}}>
                   <div style={{
-                    display: 'inline-block',
-                    padding: '6px 12px',
-                    background: '#003DA5',
-                    color: '#FFF',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    marginBottom: '15px',
-                    letterSpacing: '0.5px',
+                    height: '200px',
+                    background: 'linear-gradient(135deg, #1E5BA8 0%, #3A7BC8 100%)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                   }}>
-                    PRVI TIM
+                    <div style={{fontSize: '60px'}}>📰</div>
                   </div>
-                  <h3 style={{
-                    fontFamily: 'Roboto Condensed',
-                    fontSize: '20px',
-                    fontWeight: 700,
-                    marginBottom: '15px',
-                    color: '#333',
-                    lineHeight: 1.3,
-                  }}>
-                    Važna pobeda u derbiju protiv lokalnog rivala
-                  </h3>
-                  <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '15px'}}>
-                    FK Šumadija ostvarila je pobedu rezultatom 2:1 u uzbudljivoj utakmici na Stadionu Bubanj...
-                  </p>
-                  <div style={{fontSize: '13px', color: '#999'}}>15. februar 2024</div>
-                </div>
-              </div>
-            </Link>
-
-            {/* News Card 2 */}
-            <Link href="/vesti/2" style={{textDecoration: 'none'}}>
-              <div className="card">
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '16/9',
-                  background: '#2ECC71',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '50px',
-                  color: '#FFF',
-                }}>
-                  👦
-                </div>
-                <div style={{padding: '25px'}}>
-                  <div style={{
-                    display: 'inline-block',
-                    padding: '6px 12px',
-                    background: '#2ECC71',
-                    color: '#FFF',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    marginBottom: '15px',
-                    letterSpacing: '0.5px',
-                  }}>
-                    OMLADINSKA ŠKOLA
+                  <div style={{padding: '25px'}}>
+                    <span style={{
+                      display: 'inline-block',
+                      background: news.color,
+                      color: '#FFF',
+                      padding: '4px 12px',
+                      fontSize: '11px',
+                      fontWeight: 700,
+                      letterSpacing: '0.5px',
+                      marginBottom: '15px',
+                    }}>
+                      {news.category}
+                    </span>
+                    <h3 style={{
+                      fontFamily: 'Roboto Condensed',
+                      fontSize: '20px',
+                      fontWeight: 700,
+                      color: '#1A1A1A',
+                      marginBottom: '10px',
+                    }}>
+                      {news.title}
+                    </h3>
+                    <p style={{fontSize: '14px', color: '#666', marginBottom: '15px'}}>
+                      Saznajte više o najnovijim dešavanjima iz našeg kluba...
+                    </p>
+                    <span style={{
+                      color: '#1E5BA8',
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                    }}>
+                      Pročitaj više →
+                    </span>
                   </div>
-                  <h3 style={{
-                    fontFamily: 'Roboto Condensed',
-                    fontSize: '20px',
-                    fontWeight: 700,
-                    marginBottom: '15px',
-                    color: '#333',
-                    lineHeight: 1.3,
-                  }}>
-                    Otvorene prijave za prolećnu sezonu
-                  </h3>
-                  <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '15px'}}>
-                    Počele su prijave za prolećnu sezonu omladinske škole FK Šumadija 1903...
-                  </p>
-                  <div style={{fontSize: '13px', color: '#999'}}>12. februar 2024</div>
                 </div>
-              </div>
-            </Link>
-
-            {/* News Card 3 */}
-            <Link href="/vesti/3" style={{textDecoration: 'none'}}>
-              <div className="card">
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '16/9',
-                  background: '#D4A017',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '50px',
-                  color: '#FFF',
-                }}>
-                  🏗️
-                </div>
-                <div style={{padding: '25px'}}>
-                  <div style={{
-                    display: 'inline-block',
-                    padding: '6px 12px',
-                    background: '#D4A017',
-                    color: '#FFF',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    marginBottom: '15px',
-                    letterSpacing: '0.5px',
-                  }}>
-                    KLUB
-                  </div>
-                  <h3 style={{
-                    fontFamily: 'Roboto Condensed',
-                    fontSize: '20px',
-                    fontWeight: 700,
-                    marginBottom: '15px',
-                    color: '#333',
-                    lineHeight: 1.3,
-                  }}>
-                    Renovacija stadiona Bubanj u toku
-                  </h3>
-                  <p style={{fontSize: '14px', color: '#666', lineHeight: 1.6, marginBottom: '15px'}}>
-                    Radovi na renovaciji stadiona napreduju po planu. Očekuje se završetak do...
-                  </p>
-                  <div style={{fontSize: '13px', color: '#999'}}>10. februar 2024</div>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
 
           <div style={{textAlign: 'center', marginTop: '50px'}}>
             <Link href="/vesti">
-              <button className="btn-red" style={{fontSize: '16px', padding: '16px 50px'}}>
+              <button className="btn-outline">
                 SVE VESTI
               </button>
             </Link>
@@ -603,38 +381,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA BANNER - Sheffield FC Style */}
+      {/* CTA SECTION */}
       <section style={{
-        background: '#003DA5',
-        padding: '60px 20px',
-        textAlign: 'center',
+        background: 'linear-gradient(135deg, #1E5BA8 0%, #0A2647 100%)',
+        padding: '80px 0',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div className="container-custom">
-          <h2 style={{
-            fontFamily: 'Roboto Condensed',
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-            fontWeight: 900,
-            color: '#FFF',
-            marginBottom: '20px',
-            textTransform: 'uppercase',
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          opacity: 0.3,
+        }}></div>
+
+        <div className="container-custom" style={{position: 'relative', zIndex: 10}}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '40px',
+            alignItems: 'center',
           }}>
-            POSTANI DEO NAŠE PORODICE
-          </h2>
-          <p style={{fontSize: '16px', color: '#FFF', marginBottom: '30px', maxWidth: '600px', margin: '0 auto 30px'}}>
-            Priključi se najstarijem fudbalskom klubu u Srbiji
-          </p>
-          <div style={{display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap'}}>
-            <Link href="/omladinska-skola">
-              <button className="btn-gold" style={{fontSize: '16px', padding: '16px 40px'}}>
-                UPIŠI SE U ŠKOLU
-              </button>
-            </Link>
-            <Link href="/shop">
-              <button className="btn-white" style={{fontSize: '16px', padding: '14px 40px'}}>
-                PODRŽI KLUB
-              </button>
-            </Link>
+            <div style={{textAlign: 'center'}}>
+              <div style={{fontSize: '60px', marginBottom: '20px'}}>🎓</div>
+              <h3 style={{
+                fontFamily: 'Roboto Condensed',
+                fontSize: '28px',
+                fontWeight: 900,
+                color: '#FFF',
+                marginBottom: '15px',
+              }}>
+                Omladinska Škola
+              </h3>
+              <p style={{fontSize: '16px', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '25px'}}>
+                Treninge za decu i omladince svih uzrasta
+              </p>
+              <Link href="/omladinska-skola">
+                <button className="btn-white">
+                  SAZNAJ VIŠE
+                </button>
+              </Link>
+            </div>
+
+            <div style={{textAlign: 'center'}}>
+              <div style={{fontSize: '60px', marginBottom: '20px'}}>⛹️</div>
+              <h3 style={{
+                fontFamily: 'Roboto Condensed',
+                fontSize: '28px',
+                fontWeight: 900,
+                color: '#FFF',
+                marginBottom: '15px',
+              }}>
+                Balon Sala
+              </h3>
+              <p style={{fontSize: '16px', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '25px'}}>
+                Rezervišite termin za vašu ekipu
+              </p>
+              <Link href="/balon-sala">
+                <button className="btn-white">
+                  REZERVIŠI
+                </button>
+              </Link>
+            </div>
+
+            <div style={{textAlign: 'center'}}>
+              <div style={{fontSize: '60px', marginBottom: '20px'}}>🤝</div>
+              <h3 style={{
+                fontFamily: 'Roboto Condensed',
+                fontSize: '28px',
+                fontWeight: 900,
+                color: '#FFF',
+                marginBottom: '15px',
+              }}>
+                Sponzorstva
+              </h3>
+              <p style={{fontSize: '16px', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '25px'}}>
+                Podržite najstariji klub u Srbiji
+              </p>
+              <Link href="/sponzori">
+                <button className="btn-white">
+                  KONTAKT
+                </button>
+              </Link>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* CONTACT BANNER */}
+      <section style={{background: '#FFF', padding: '60px 0', textAlign: 'center'}}>
+        <div className="container-custom">
+          <h3 style={{
+            fontFamily: 'Roboto Condensed',
+            fontSize: '32px',
+            fontWeight: 900,
+            color: '#1A1A1A',
+            marginBottom: '15px',
+          }}>
+            Postani deo Plavih Vukova! 🐺
+          </h3>
+          <p style={{fontSize: '16px', color: '#666', marginBottom: '30px', maxWidth: '600px', margin: '0 auto 30px'}}>
+            Pridruži se navijačima najstarijeg fudbalskog kluba u Srbiji
+          </p>
+          <Link href="/kontakt">
+            <button className="btn-blue" style={{fontSize: '16px', padding: '16px 40px'}}>
+              KONTAKTIRAJ NAS
+            </button>
+          </Link>
         </div>
       </section>
     </div>

@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{background: '#2C2C2C', color: '#FFF'}}>
-      <div className="container-custom" style={{padding: '50px 20px 30px'}}>
+    <footer style={{background: '#0A2647', color: '#FFF'}}>
+      <div className="container-custom" style={{padding: '60px 20px 30px'}}>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '40px'}}>
           {/* Club Info */}
           <div>

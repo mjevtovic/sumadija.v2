@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
-  --primary-blue: #003DA5;
-  --gold: #D4A017;
+  --primary-blue: #1E5BA8;
+  --light-blue: #3A7BC8;
   --white: #FFFFFF;
-  --light-gray: #F5F5F5;
+  --light-gray: #F8F9FA;
   --medium-gray: #E0E0E0;
-  --dark-gray: #2C2C2C;
-  --text: #333333;
+  --dark-blue: #0A2647;
+  --text: #1A1A1A;
   --text-light: #666666;
+  --accent-red: #DC3545;
 }
 
 * {
@@ -30,42 +31,45 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.btn-gold {
-  background: var(--gold);
+.btn-blue {
+  background: var(--primary-blue);
   color: var(--white);
   padding: 14px 32px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s;
+  transition: all 0.3s;
   border: none;
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.5px;
 }
 
-.btn-gold:hover {
-  background: #B8860B;
+.btn-blue:hover {
+  background: var(--light-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 91, 168, 0.3);
 }
 
-.btn-red {
-  background: #C8102E;
-  color: var(--white);
+.btn-outline {
+  background: transparent;
+  color: var(--primary-blue);
   padding: 14px 32px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s;
-  border: none;
+  transition: all 0.3s;
+  border: 2px solid var(--primary-blue);
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.5px;
 }
 
-.btn-red:hover {
-  background: #A00D25;
+.btn-outline:hover {
+  background: var(--primary-blue);
+  color: var(--white);
 }
 
 .btn-white {
@@ -142,4 +146,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-overlay:hover::after {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:hover {
+  color: #1E5BA8 !important;
 }
